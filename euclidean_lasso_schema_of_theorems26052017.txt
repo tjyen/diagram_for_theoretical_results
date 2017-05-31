@@ -1,0 +1,61 @@
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  #graph [overlap = true, fontsize = 10]
+  graph [rankdir = "LR"];
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  
+  "A"[
+     label = "Assumption 1"
+  ];
+  "B"[
+     label = "Assumption 2"
+  ]; 
+  "C"[
+     label = "Lemma B.1"
+  ]; 
+  "D" [
+     label = "Lemma B.2"
+  ]; 
+  "E" [
+     label = "Lemma B.3"
+  ]; 
+  "F" [
+     label = "Lemma B.4"
+  ]
+  "G" [
+     label = "Lemma B.5"
+  ];
+  "H" [ 
+     label = "Proposition B.1"
+  ];
+  "I" [
+     label = "Proposition B.2"
+  ];
+  "J" [
+     label = "Proposition B.3"
+  ];
+  "K" [
+     label = "Proposition B.4"
+  ];
+  "L" [
+     label = "Proposition B.5"
+  ];
+  
+  "M" [
+     label = "Theorem 4.1"
+  
+  ];
+  "N" [
+     label = "Theorem 4.2"
+  ]
+
+  # several 'edge' statements
+  A->M A->N B->M B->N C->M D->M
+  A->C F->C G->C I->C C->D
+  I->D H->D J->M H->E L->E C->E
+  D->N E->N H->N K->N A->F 
+  A->G 
+}
